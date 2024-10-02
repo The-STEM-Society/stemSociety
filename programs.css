@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+
+
+.header {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: black;
+}
+
+
+
+
+
+
+
+.footer-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.wave {
+    display: block;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    color: whitesmoke;
+    background-color: rgb(0, 0, 103);
+    padding: 2%;
+    flex-direction: row;
+    display: inline-flex;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.footer-content {
+    padding-left: 2%;
+}
+
+.footer h4, .footer h5, .footer a {
+    margin-bottom: 10px;
+}
+
+
+
+.learnMore {
+    width: 50%;
+    height: 35px;
+    border-radius: 20px;
+    background-color: rgb(107, 19, 107);
+    border-width: 1px;
+    transition: 0.4s;
+    color: white;
+}
+
+.learnMore:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+nav .logo img {
+    width: 70px;
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 5px;
+    position: relative;
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -5px;
+    position: relative;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 107);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overlay-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover, .overlay-content a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+}
+
+.content {
+    color: white;
+    max-width: 500px;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: pop-in 0.5s forwards;
+}
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .main-content {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .content {
+        margin-right: 20px;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 30px;
+    }
+
+    .feature-img {
+        width: 30%;
+        height: auto;
+        position: static;
+        margin-left: 10px;
+    }
+    .second-img {
+        width: 50%;
+
+    }
+}
+
+@media (min-width: 769px) {
+    .feature-img {
+        width: 300px;
+        position: absolute;
+        bottom: 40px;
+        right: 5%;
+    }
+    .second-img {
+        width: 40%;
+
+        
+    }
+}
+div {
+    border-width: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.headingTeam {
+    background: linear-gradient(rgb(184, 0, 156), rgba(123, 219, 248, 0.769));
+    width: 95%;
+    height: 140px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 120%;
+    color: whitesmoke;
+    
+    opacity: 1;
+    animation: up 0.5s forwards;
+    
+}
+
+
+
+@keyframes up {
+    0% {
+        opacity: 0;
+        transform: translateY(90px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+#teamTitle {
+    opacity: 0;
+    animation: pop-in 0.5s forwards;
+    transform: scale(0);
+    animation-delay: 0.5s;
+    background: linear-gradient(#8800ff, #540699);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+@keyframes pop-in {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+  .form-container-student, .form-container-tutor {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 80%;
+    height: 80%;
+    overflow-y: auto;
+}
+.form-group-tutor {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group-tutor label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.form-group-tutor input[type="file"],
+.form-group-tutor input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.form-group-tutor button {
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    width: 40%;
+    cursor: pointer;
+}
+.form-group-tutor button:hover {
+    background-color: #fc48a2;
+}
+
+.form-group-tutor textarea {
+    width: 100%; /* Make the textarea take up the full width of the container */
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Ensures padding does not affect the width */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: vertical; /* Allows the user to resize the textarea vertically */
+}
+
+
+/* Hide the default file input button */
+.form-group-tutor input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+/* Style the custom button */
+.custom-file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e188b4;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+    border: none; /* Remove default border */
+}
+
+.custom-file-label:hover {
+    background-color: #fc48a2;
+}
+
+
+
+
+
+
+
+.form-container-student {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 80%;
+    height: 80%;
+    overflow-y: auto;
+}
+.form-group-student {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group-student label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group-student input[type="file"],
+.form-group-student input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.form-group-student textarea {
+    width: 100%; /* Make the textarea take up the full width of the container */
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Ensures padding does not affect the width */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: vertical; /* Allows the user to resize the textarea vertically */
+}
+
+
+.form-group-student button {
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    width: 40%;
+    cursor: pointer;
+    
+    
+}
+.form-group-student button:hover {
+    background-color: #fc48a2;
+}
+
+
+
+.applyBtn {
+    width: 170px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(155, 0, 155);
+    border-width: 1px;
+    transition: 0.4s;
+    color: white;
+}
+
+.applyBtn:hover {
+    background-color:  rgb(107, 19, 107);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+
+.notesBtn {
+    width: 170px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(155, 0, 155);
+    border-width: 1px;
+    transition: 0.4s;
+    color: white;
+    margin: 10px;
+}
+
+.notesBtn:hover {
+    background-color:  rgb(107, 19, 107);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.notesDiv {
+     
+    flex-direction: row;
+    text-align: center;
+}
+
+#interest {
+    width: 70%;
+    display: block;
+    font-size: 15px;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#search {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border-width: 0px;
+    background-color: #8800ff;
+    color: white;
+    transition: 0.4s;
+}
+#search:hover {
+    background-color: #540699;
+}
+
+#results {
+    width: 90%;
+    margin-left: 2%;
+}
